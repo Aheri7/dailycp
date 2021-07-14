@@ -1,0 +1,27 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+     int g,p,t,n,c,d;
+    bool f;
+    bool s;
+    cin>>t;
+    while(t--)
+    {
+        int count1=0;
+        int count2=0;
+        cin>>g>>p;
+        cin>>n;
+        for(int i=0; i<n; i++){
+        cin>>f>>s;
+        if(f)
+       count1++;
+         if(s)
+        count2++;
+        }
+        c=((g*count1)+(p*count2));
+        d=((g*count2)+(p*count1));
+        cout<<min(c,d)<<endl;
+    }
+    return 0;
+}
